@@ -16,7 +16,7 @@ GameBackgr::GameBackgr() :
 
 void GameBackgr::createBackgr()
 {
-    auto makeBackgr = [this](sf::Sprite sprite) mutable
+    auto makeBackgr = [this](sf::Sprite sprite)
     {
         static std::size_t count = 0;
 
