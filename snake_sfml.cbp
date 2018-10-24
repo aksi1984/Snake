@@ -59,6 +59,7 @@
 		<Unit filename="include/randfunc.hpp" />
 		<Unit filename="include/sounds.hpp" />
 		<Unit filename="include/text.hpp" />
+		<Unit filename="include/textbuilder.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/game.cpp" />
 		<Unit filename="src/gameBackgr.cpp" />
@@ -69,6 +70,7 @@
 		<Unit filename="src/randfunc.cpp" />
 		<Unit filename="src/sounds.cpp" />
 		<Unit filename="src/text.cpp" />
+		<Unit filename="src/textbuilder.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -396,11 +396,11 @@
 1539813408 source:d:\moje programy\snake_sfml\src\engine.cpp
 	"engine.hpp"
 
-1540236631 source:d:\moje programy\snake_sfml\src\object.cpp
+1540332219 source:d:\moje programy\snake_sfml\src\object.cpp
 	"object.hpp"
 	<iostream>
 
-1540154797 d:\moje programy\snake_sfml\include\object.hpp
+1540332258 d:\moje programy\snake_sfml\include\object.hpp
 	"randfunc.hpp"
 	"myUtility.hpp"
 	<SFML/Graphics.hpp>
@@ -434,7 +434,8 @@
 
 1539814360 d:\moje programy\snake_sfml\include\map.hpp
 
-1540305416 d:\moje programy\snake_sfml\include\text.hpp
+1540333053 d:\moje programy\snake_sfml\include\text.hpp
+	"textbuilder.hpp"
 	<SFML/Graphics.hpp>
 	<iostream>
 	<array>
@@ -542,7 +543,7 @@
 	<SFML/Audio/Export.hpp>
 	<string>
 
-1540305497 source:d:\moje programy\snake_sfml\src\text.cpp
+1540333014 source:d:\moje programy\snake_sfml\src\text.cpp
 	"text.hpp"
 
 1525812018 d:\biblioteki\sfml-2.5.0\sfml-2.5.0-windows-gcc-5.1.0-tdm-32-bit (1)\sfml-2.5.0\include\sfml\graphics.hpp
@@ -964,7 +965,7 @@
 1540198470 source:d:\moje programy\snake_sfml\src\values.cpp
 	"values.hpp"
 
-1540303736 d:\moje programy\snake_sfml\include\sounds.hpp
+1540333090 d:\moje programy\snake_sfml\include\sounds.hpp
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	<exception>
@@ -1109,7 +1110,14 @@
 	<SFML/Graphics.hpp>
 	<map>
 
-1540246292 source:d:\moje programy\snake_sfml\src\gamebackgr.cpp
+1540331410 source:d:\moje programy\snake_sfml\src\gamebackgr.cpp
 	"gameBackgr.hpp"
 	<iostream>
+
+1540332744 d:\moje programy\snake_sfml\include\textbuilder.hpp
+	<SFML/Graphics.hpp>
+	<vector>
+
+1540332879 source:d:\moje programy\snake_sfml\src\textbuilder.cpp
+	"textbuilder.hpp"
 

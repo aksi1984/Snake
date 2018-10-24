@@ -5,7 +5,6 @@
 #include <SFML/Audio.hpp>
 #include <exception>
 
-
 class Sound
 {
 public:

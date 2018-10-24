@@ -5,7 +5,10 @@ Text::Text()
     if(font.loadFromFile(R"(Fonts\StalinistOne-Regular.ttf)"))
     {
         std::transform(texts.begin(), texts.end(), texts.begin(), [this](sf::Text t){ t.setFont(font); return t; });
-        std::transform(texts.begin(), texts.end(), texts.begin(), TextBuilder());
+        std::transform(texts.begin(), texts.end(), texts.begin(), TextBuilder(530, 70, sf::Color(047, 69, 056)));
+
+        texts.at(2).setString("Game over!!!");
+        texts.at(2).setColor(sf::Color::Red);
     }
 }
 
@@ -17,13 +20,10 @@ void Text::update(int points, std::size_t length)
 
 void Text::draw(sf::RenderWindow& window, bool isGameOver)
 {
-    if(!isGameOver)
+    std::size_t numOfTextToDisplay = ( isGameOver ? 3 : 2 );
+
+    for(std::size_t i = 0; i < numOfTextToDisplay; ++i)
     {
-        for(std::size_t i = 0; i < texts.size() - 1; ++i)
-        {
-            window.draw(texts.at(i));
-        }
+        window.draw(texts.at(i));
     }
-    else
-        window.draw(texts.at(TextType::GameOverText));
 }

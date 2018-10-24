@@ -44,8 +44,7 @@ void Object::draw(sf::RenderTarget& window)
 SnakeHead::SnakeHead() :
     velocityX(0),
     velocityY(20.f),
-    timeLimit(0.25),
-    changeOfPos(false)
+    timeLimit(0.25)
 {
     Object::setColor(sf::Color(255,164,032));
     Object::setPosition(100.f, 100.f);

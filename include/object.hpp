@@ -58,9 +58,6 @@ public:
     {
         Object::setPosition(pos);
     }
-
-private:
-
 };
 
 ////////////////////////////////////
