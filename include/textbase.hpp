@@ -14,8 +14,6 @@ public:
     virtual void draw(sf::RenderWindow& window) = 0;
 
 protected:
-    void create();
-
     sf::Font font;
     std::vector<sf::Text> textVec;
 };
