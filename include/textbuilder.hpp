@@ -7,7 +7,7 @@
 class TextBuilder
 {
 public:
-    TextBuilder(float w, float h, sf::Color c);
+    TextBuilder(float w, float h, int s, sf::Color c);
 
     sf::Text operator()(sf::Text);
 
@@ -15,6 +15,7 @@ private:
     sf::Color color;
     float width;
     float height;
+    int charSize;
 };
 
 #endif // TEXTBUILDER_HPP

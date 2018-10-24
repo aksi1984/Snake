@@ -1,4 +1,4 @@
-#include "gameBackgr.hpp"
+#include "gamebackgr.hpp"
 #include <iostream>
 
 GameBackgr::GameBackgr() :

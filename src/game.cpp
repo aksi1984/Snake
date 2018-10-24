@@ -19,7 +19,8 @@ void Game::run()
     {
         processEvent();
         objectsMove();
-        update();
+        updateObjects();
+        updateText();
         playSounds();
         render();
     }
@@ -69,7 +70,7 @@ void Game::objectsMove()
     snakeHead.move(clock);
 }
 
-void Game::update()
+void Game::updateObjects()
 {
     if(isCollision(snakeHead, fruit))
     {
@@ -94,8 +95,12 @@ void Game::update()
         if(gameOver)
             break;
     }
+}
 
-    text.update(points.getPoints(), snakeBodyDeque.size());
+void Game::updateText()
+{
+    gameText.update(points.getPoints(), snakeBodyDeque.size());
+    gameText.setNumTextToDisplay(gameOver);
 }
 
 void Game::playSounds()
@@ -107,7 +112,7 @@ void Game::render()
 {
     window.clear(sf::Color::White);
     backgrounds.draw(window);
-    text.draw(window, gameOver);
+    gameText.draw(window);
     snakeHead.draw(window);
     for(auto x : snakeBodyDeque) x.draw(window);
     fruit.draw(window);

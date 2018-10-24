@@ -2,8 +2,8 @@
 #define GAME_HPP
 
 #include "myUtility.hpp"
-#include "gameBackgr.hpp"
-#include "text.hpp"
+#include "gamebackgr.hpp"
+#include "gametext.hpp"
 #include "sounds.hpp"
 #include "points.hpp"
 #include "object.hpp"
@@ -21,7 +21,8 @@ public:
 private:
     void processEvent();
     void objectsMove();
-    void update();
+    void updateObjects();
+    void updateText();
     void playSounds();
     void render();
 
@@ -29,7 +30,7 @@ private:
     sf::Clock clock;
 
     GameBackgr backgrounds;
-    Text text;
+    GameText gameText;
     Points points;
     Sound sound;
 

@@ -3,7 +3,6 @@
 
 #include "object.hpp"
 
-
 template<typename T>
 bool isCollision(const SnakeHead& snakeHead, const T& otherObject)
 {

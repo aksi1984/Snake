@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1540302002 source:d:\moje programy\snake_sfml\main.cpp
+1540416216 source:d:\moje programy\snake_sfml\main.cpp
 	"game.hpp"
 
 1470642834 d:\biblioteki\sfml-2.4.0\sfml-2.4.0-windows-gcc-4.9.2-tdm-32-bit\sfml-2.4.0\include\sfml\graphics.hpp
@@ -421,7 +421,7 @@
 	"move.hpp"
 	<iostream>
 
-1540238769 d:\moje programy\snake_sfml\include\collisions.hpp
+1540416361 d:\moje programy\snake_sfml\include\collisions.hpp
 	"object.hpp"
 
 1540152123 source:d:\moje programy\snake_sfml\src\collisions.cpp
@@ -434,11 +434,9 @@
 
 1539814360 d:\moje programy\snake_sfml\include\map.hpp
 
-1540333053 d:\moje programy\snake_sfml\include\text.hpp
+1540414150 d:\moje programy\snake_sfml\include\text.hpp
 	"textbuilder.hpp"
-	<SFML/Graphics.hpp>
-	<iostream>
-	<array>
+	"textbase.hpp"
 
 1470642834 d:\biblioteki\sfml-2.4.0\sfml-2.4.0-windows-gcc-4.9.2-tdm-32-bit\sfml-2.4.0\include\sfml\audio.hpp
 	<SFML/System.hpp>
@@ -543,7 +541,7 @@
 	<SFML/Audio/Export.hpp>
 	<string>
 
-1540333014 source:d:\moje programy\snake_sfml\src\text.cpp
+1540414361 source:d:\moje programy\snake_sfml\src\text.cpp
 	"text.hpp"
 
 1525812018 d:\biblioteki\sfml-2.5.0\sfml-2.5.0-windows-gcc-5.1.0-tdm-32-bit (1)\sfml-2.5.0\include\sfml\graphics.hpp
@@ -1083,23 +1081,24 @@
 1534631087 source:d:\moje programy\snake_sfml\src\images.cpp
 	"images.hpp"
 
-1539862338 d:\moje programy\snake_sfml\include\menu.hpp
+1540416316 d:\moje programy\snake_sfml\include\menu.hpp
+	"menutext.hpp"
 
-1539813408 source:d:\moje programy\snake_sfml\src\menu.cpp
+1540415761 source:d:\moje programy\snake_sfml\src\menu.cpp
 	"menu.hpp"
 	<iostream>
 
-1540303938 d:\moje programy\snake_sfml\include\game.hpp
+1540416182 d:\moje programy\snake_sfml\include\game.hpp
 	"myUtility.hpp"
-	"gameBackgr.hpp"
-	"text.hpp"
+	"gamebackgr.hpp"
+	"gametext.hpp"
 	"sounds.hpp"
 	"points.hpp"
 	"object.hpp"
 	"collisions.hpp"
 	"deque"
 
-1540305322 source:d:\moje programy\snake_sfml\src\game.cpp
+1540416191 source:d:\moje programy\snake_sfml\src\game.cpp
 	"game.hpp"
 	<iostream>
 
@@ -1110,14 +1109,36 @@
 	<SFML/Graphics.hpp>
 	<map>
 
-1540331410 source:d:\moje programy\snake_sfml\src\gamebackgr.cpp
-	"gameBackgr.hpp"
+1540416163 source:d:\moje programy\snake_sfml\src\gamebackgr.cpp
+	"gamebackgr.hpp"
 	<iostream>
 
-1540332744 d:\moje programy\snake_sfml\include\textbuilder.hpp
+1540412773 d:\moje programy\snake_sfml\include\textbuilder.hpp
 	<SFML/Graphics.hpp>
 	<vector>
 
-1540332879 source:d:\moje programy\snake_sfml\src\textbuilder.cpp
+1540412783 source:d:\moje programy\snake_sfml\src\textbuilder.cpp
 	"textbuilder.hpp"
+
+1540416286 source:d:\moje programy\snake_sfml\src\menutext.cpp
+	"menutext.hpp"
+
+1540415163 d:\moje programy\snake_sfml\include\menutext.hpp
+	"textbuilder.hpp"
+	"textbase.hpp"
+
+1540413497 d:\moje programy\snake_sfml\include\textbase.hpp
+	<SFML/Graphics.hpp>
+	<vector>
+	<algorithm>
+
+1540413776 source:d:\moje programy\snake_sfml\src\textbase.cpp
+	"textbase.hpp"
+
+1540415936 d:\moje programy\snake_sfml\include\gametext.hpp
+	"textbuilder.hpp"
+	"textbase.hpp"
+
+1540415972 source:d:\moje programy\snake_sfml\src\gametext.cpp
+	"gametext.hpp"
 

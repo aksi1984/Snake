@@ -50,26 +50,28 @@
 		</Linker>
 		<Unit filename="include/collisions.hpp" />
 		<Unit filename="include/game.hpp" />
-		<Unit filename="include/gameBackgr.hpp" />
+		<Unit filename="include/gamebackgr.hpp" />
+		<Unit filename="include/gametext.hpp" />
 		<Unit filename="include/menu.hpp" />
-		<Unit filename="include/move.hpp" />
+		<Unit filename="include/menutext.hpp" />
 		<Unit filename="include/myUtility.hpp" />
 		<Unit filename="include/object.hpp" />
 		<Unit filename="include/points.hpp" />
 		<Unit filename="include/randfunc.hpp" />
 		<Unit filename="include/sounds.hpp" />
-		<Unit filename="include/text.hpp" />
+		<Unit filename="include/textbase.hpp" />
 		<Unit filename="include/textbuilder.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/game.cpp" />
-		<Unit filename="src/gameBackgr.cpp" />
+		<Unit filename="src/gamebackgr.cpp" />
+		<Unit filename="src/gametext.cpp" />
 		<Unit filename="src/menu.cpp" />
-		<Unit filename="src/move.cpp" />
+		<Unit filename="src/menutext.cpp" />
 		<Unit filename="src/object.cpp" />
 		<Unit filename="src/points.cpp" />
 		<Unit filename="src/randfunc.cpp" />
 		<Unit filename="src/sounds.cpp" />
-		<Unit filename="src/text.cpp" />
+		<Unit filename="src/textbase.cpp" />
 		<Unit filename="src/textbuilder.cpp" />
 		<Extensions>
 			<code_completion />
