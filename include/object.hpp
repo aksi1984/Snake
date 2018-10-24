@@ -54,10 +54,6 @@ class SnakeBody : public Object
 {
 public:
     SnakeBody();
-    SnakeBody(const sf::Vector2f& pos)
-    {
-        Object::setPosition(pos);
-    }
 };
 
 ////////////////////////////////////

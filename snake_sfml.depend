@@ -400,7 +400,7 @@
 	"object.hpp"
 	<iostream>
 
-1540332258 d:\moje programy\snake_sfml\include\object.hpp
+1540417200 d:\moje programy\snake_sfml\include\object.hpp
 	"randfunc.hpp"
 	"myUtility.hpp"
 	<SFML/Graphics.hpp>
@@ -1127,7 +1127,7 @@
 	"textbuilder.hpp"
 	"textbase.hpp"
 
-1540413497 d:\moje programy\snake_sfml\include\textbase.hpp
+1540417029 d:\moje programy\snake_sfml\include\textbase.hpp
 	<SFML/Graphics.hpp>
 	<vector>
 	<algorithm>
