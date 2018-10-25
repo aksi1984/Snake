@@ -8,10 +8,11 @@ enum ScreenRes
     Heigh = 600
 };
 
-enum MenuState
+enum GameState
 {
     PlayGame,
-    Exit
+    Exit,
+    EndGame
 };
 
 

@@ -13,7 +13,7 @@ int main()
 
         while(app.pollEvent(e))
         {
-            if(e.type == sf::Event::Closed || menu.getMenuState() == MenuState::Exit)
+            if(e.type == sf::Event::Closed || menu.getState() == GameState::Exit)
                 app.close();
         }
 

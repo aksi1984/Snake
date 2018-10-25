@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1540416216 source:d:\moje programy\snake_sfml\main.cpp
+1540502968 source:d:\moje programy\snake_sfml\main.cpp
 	"game.hpp"
+	"menu.hpp"
 
 1470642834 d:\biblioteki\sfml-2.4.0\sfml-2.4.0-windows-gcc-4.9.2-tdm-32-bit\sfml-2.4.0\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -1081,11 +1082,12 @@
 1534631087 source:d:\moje programy\snake_sfml\src\images.cpp
 	"images.hpp"
 
-1540500838 d:\moje programy\snake_sfml\include\menu.hpp
+1540502916 d:\moje programy\snake_sfml\include\menu.hpp
+	"state.hpp"
 	"menutext.hpp"
 	"myUtility.hpp"
 
-1540500926 source:d:\moje programy\snake_sfml\src\menu.cpp
+1540502945 source:d:\moje programy\snake_sfml\src\menu.cpp
 	"menu.hpp"
 
 1540416182 d:\moje programy\snake_sfml\include\game.hpp
@@ -1102,7 +1104,7 @@
 	"game.hpp"
 	<iostream>
 
-1540500792 d:\moje programy\snake_sfml\include\myutility.hpp
+1540502581 d:\moje programy\snake_sfml\include\myutility.hpp
 
 1540245807 d:\moje programy\snake_sfml\include\gamebackgr.hpp
 	"myUtility.hpp"
@@ -1141,4 +1143,12 @@
 
 1540415972 source:d:\moje programy\snake_sfml\src\gametext.cpp
 	"gametext.hpp"
+
+1540503327 d:\moje programy\snake_sfml\include\state.hpp
+	"myUtility.hpp"
+	<SFML/Graphics.hpp>
+	<vector>
+
+1540502751 source:d:\moje programy\snake_sfml\src\state.cpp
+	"state.hpp"
 

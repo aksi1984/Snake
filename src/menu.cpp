@@ -9,11 +9,6 @@ void Menu::run(sf::RenderWindow& window)
     menuText.draw(window);
 }
 
-MenuState Menu::getMenuState() const
-{
-    return menuState;
-}
-
 void Menu::checkTheTextSelect(sf::RenderWindow& window)
 {
     sf::Vector2f mousePosition = sf::Vector2f(sf::Mouse::getPosition(window));
@@ -36,7 +31,7 @@ void Menu::checkButtonClicked()
         if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && menuText.getColor(i) == sf::Color::Red)
         {
             menuText.changeColor(i, sf::Color::Magenta);
-            menuState = static_cast<MenuState>(i);
+            State::setState(static_cast<GameState>(i));
         }
     }
 }
