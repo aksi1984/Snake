@@ -5,7 +5,13 @@ Menu::Menu() { }
 void Menu::run(sf::RenderWindow& window)
 {
     checkTheTextSelect(window);
+    checkButtonClicked();
     menuText.draw(window);
+}
+
+MenuState Menu::getMenuState() const
+{
+    return menuState;
 }
 
 void Menu::checkTheTextSelect(sf::RenderWindow& window)
@@ -20,5 +26,17 @@ void Menu::checkTheTextSelect(sf::RenderWindow& window)
         }
         else
             menuText.changeColor(i, sf::Color::Blue);
+    }
+}
+
+void Menu::checkButtonClicked()
+{
+    for(std::size_t i = 0; i < menuText.getSize(); ++i)
+    {
+        if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && menuText.getColor(i) == sf::Color::Red)
+        {
+            menuText.changeColor(i, sf::Color::Magenta);
+            menuState = static_cast<MenuState>(i);
+        }
     }
 }

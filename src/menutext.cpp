@@ -26,6 +26,11 @@ void MenuText::changeColor(std::size_t num, sf::Color color)
     textVec.at(num).setFillColor(color);
 }
 
+sf::Color MenuText::getColor(std::size_t num) const
+{
+    return textVec.at(num).getColor();
+}
+
 void MenuText::draw(sf::RenderWindow& window)
 {
     for(auto x : textVec) window.draw(x);

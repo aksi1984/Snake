@@ -8,5 +8,11 @@ enum ScreenRes
     Heigh = 600
 };
 
+enum MenuState
+{
+    PlayGame,
+    Exit
+};
+
 
 #endif // ENUMS_HPP
