@@ -3,7 +3,7 @@
 MenuText::MenuText() :
     TextBase(2, R"(Fonts\Super FamiFont.ttf)")
 {
-    std::transform(textVec.begin(), textVec.end(), textVec.begin(), TextBuilder(320, 100, 30, sf::Color::Blue));
+    std::transform(textVec.begin(), textVec.end(), textVec.begin(), TextBuilder(300, 100, 30, sf::Color::Blue));
 
     const std::size_t strArraySz = 2;
     std::array<std::string, strArraySz> strings{ "Play", "Exit" };

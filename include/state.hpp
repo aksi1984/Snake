@@ -3,35 +3,19 @@
 
 #include "myUtility.hpp"
 #include <SFML/Graphics.hpp>
-#include <vector>
+#include <memory>
 
 class State
 {
 public:
     State();
-    virtual ~State();
 
+    void setState(GameStates state);
     virtual void run(sf::RenderWindow& window) = 0;
-    GameState getState() const;
-
-protected:
-    void setState(GameState gSstate);
+    GameStates getState() const;
 
 private:
-    GameState gameState;
-};
-
-/////////////////////////////////
-
-class Client
-{
-public:
-    Client();
-
-private:
-    std::vector<State> state;
-
-    sf::RenderWindow window;
+    GameStates gameStates;
 };
 
 #endif // STATE_HPP

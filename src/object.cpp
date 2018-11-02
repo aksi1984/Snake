@@ -95,9 +95,12 @@ void SnakeHead::move(sf::Clock& clock)
     }
     else
         changeOfPos = false;
+}
 
-    moveLimit();
-
+bool SnakeHead::outsideTheField()
+{
+    return ( Object::getPosition().x < 0 || Object::getPosition().x > ScreenRes::GameWidth - Object::getGlobalBounds().width ||
+             Object::getPosition().y < 0 || Object::getPosition().y > ScreenRes::Heigh - Object::getGlobalBounds().height );
 }
 
 sf::Vector2f SnakeHead::getPrevPosition() const
@@ -108,23 +111,6 @@ sf::Vector2f SnakeHead::getPrevPosition() const
 bool SnakeHead::itMoving() const
 {
     return changeOfPos;
-}
-
-void SnakeHead::moveLimit()
-{
-    float x = 0;
-    float y = 0;
-
-    if(Object::getPosition().x < 0)
-        x = Object::getGlobalBounds().width;
-    else if(Object::getPosition().x > ScreenRes::GameWidth - Object::getGlobalBounds().width)
-        x = -Object::getGlobalBounds().width;
-    else if(Object::getPosition().y < 0)
-        y = Object::getGlobalBounds().height;
-    else if(Object::getPosition().y > ScreenRes::Heigh - Object::getGlobalBounds().height)
-        y = -Object::getGlobalBounds().height;
-
-    Object::setPosition(x, y);
 }
 
 ///////////////////////////////////////////////////

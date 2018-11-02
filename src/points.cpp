@@ -12,3 +12,8 @@ int Points::getPoints() const
 {
     return actualPoints;
 }
+
+void Points::resetPoints()
+{
+    actualPoints = 0;
+}

@@ -2,6 +2,7 @@
 #define GAME_HPP
 
 #include "myUtility.hpp"
+#include "state.hpp"
 #include "gamebackgr.hpp"
 #include "gametext.hpp"
 #include "sounds.hpp"
@@ -10,23 +11,24 @@
 #include "collisions.hpp"
 #include "deque"
 
-class Game
+class Game : public State
 {
 public:
     Game();
 
-    bool isGameOver() const;
-    void run();
+    void run(sf::RenderWindow& window);
+
+protected:
+    void reset();
 
 private:
-    void processEvent();
+    void processEvent(sf::RenderWindow& window);
     void objectsMove();
     void updateObjects();
     void updateText();
     void playSounds();
-    void render();
+    void render(sf::RenderWindow& window);
 
-    sf::RenderWindow window;
     sf::Clock clock;
 
     GameBackgr backgrounds;
@@ -43,6 +45,7 @@ private:
 
     bool canPlaySound;
     bool gameOver;
+    bool isGameBegin;
 };
 
 

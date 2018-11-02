@@ -8,6 +8,7 @@ public:
     Points();
     void addPoint();
     int getPoints() const;
+    void resetPoints();
 
 private:
     int actualPoints;

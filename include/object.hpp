@@ -32,12 +32,11 @@ public:
     SnakeHead();
     void handleArrowKey(sf::Keyboard::Key key);
     void move(sf::Clock& clock);
+    bool outsideTheField();
     sf::Vector2f getPrevPosition() const;
     bool itMoving() const;
 
 private:
-    void moveLimit();
-
     float velocityX;
     float velocityY;
 

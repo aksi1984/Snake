@@ -8,12 +8,11 @@ enum ScreenRes
     Heigh = 600
 };
 
-enum GameState
+enum GameStates
 {
-    PlayGame,
-    Exit,
-    EndGame
+    StateMenu,
+    StateGame,
+    Exit
 };
-
 
 #endif // ENUMS_HPP

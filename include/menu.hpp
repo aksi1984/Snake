@@ -10,11 +10,13 @@ class Menu : public State
 public:
     Menu();
 
-    virtual void run(sf::RenderWindow& window);
+    void run(sf::RenderWindow& window);
 
 private:
+    void processEvent(sf::RenderWindow& window);
     void checkTheTextSelect(sf::RenderWindow& window);
     void checkButtonClicked();
+    void render(sf::RenderWindow& window);
 
     MenuText menuText;
 };

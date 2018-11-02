@@ -4,9 +4,21 @@ Menu::Menu() { }
 
 void Menu::run(sf::RenderWindow& window)
 {
+    processEvent(window);
     checkTheTextSelect(window);
     checkButtonClicked();
-    menuText.draw(window);
+    render(window);
+}
+
+void Menu::processEvent(sf::RenderWindow& window)
+{
+    sf::Event event;
+
+    while(window.pollEvent(event))
+    {
+        if(event.type == sf::Event::Closed || State::getState() == GameStates::Exit)
+            window.close();
+    }
 }
 
 void Menu::checkTheTextSelect(sf::RenderWindow& window)
@@ -31,7 +43,15 @@ void Menu::checkButtonClicked()
         if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && menuText.getColor(i) == sf::Color::Red)
         {
             menuText.changeColor(i, sf::Color::Magenta);
-            State::setState(static_cast<GameState>(i));
+
+            State::setState( (i == 0 ? GameStates::StateGame : GameStates::Exit) );
         }
     }
 }
+
+void Menu::render(sf::RenderWindow& window)
+{
+    menuText.draw(window);
+}
+
+

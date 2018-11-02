@@ -3,35 +3,40 @@
 
 
 Game::Game() :
-    window(sf::VideoMode(ScreenRes::Width, ScreenRes::Heigh), "Snake"),
     canPlaySound(false),
-    gameOver(false)
+    gameOver(false),
+    isGameBegin(true)
 {
     randFunc.createVecOfCoords(fruit.getGlobalBounds().width);
     fruit.setPosition(randFunc());
 }
 
-void Game::run()
+void Game::reset()
 {
-    clock.restart();
+    snakeBodyDeque.clear();
+    points.resetPoints();
+    fruit.setPosition(randFunc());
+    snakeHead.setPosition(randFunc());
+    gameOver = false;
+}
 
-    while(window.isOpen())
+void Game::run(sf::RenderWindow& window)
+{
+    if(isGameBegin)
     {
-        processEvent();
-        objectsMove();
-        updateObjects();
-        updateText();
-        playSounds();
-        render();
+        clock.restart();
+        isGameBegin = false;
     }
+
+    processEvent(window);
+    objectsMove();
+    updateObjects();
+    updateText();
+    playSounds();
+    render(window);
 }
 
-bool Game::isGameOver() const
-{
-    return gameOver;
-}
-
-void Game::processEvent()
+void Game::processEvent(sf::RenderWindow& window)
 {
     sf::Event event;
 
@@ -53,13 +58,13 @@ void Game::processEvent()
     if(gameOver)
     {
         sf::sleep(sf::Time(sf::seconds(3.f)));
-        window.close();
+        State::setState(GameStates::StateMenu);
+        reset();
     }
 }
 
 void Game::objectsMove()
 {
-
     if(snakeHead.itMoving())
     {
         snakeBodySegment.setPosition(snakeHead.getPrevPosition());
@@ -80,7 +85,6 @@ void Game::updateObjects()
             snakeBodyDeque.push_front(snakeBodySegment);
             fruit.setPosition(randFunc());
             points.addPoint();
-
         }
 
         canPlaySound = true;
@@ -88,12 +92,11 @@ void Game::updateObjects()
     else
         canPlaySound = false;
 
+    gameOver = snakeHead.outsideTheField();
+
     for(auto x : snakeBodyDeque)
     {
         gameOver = isCollision(snakeHead, x);
-
-        if(gameOver)
-            break;
     }
 }
 
@@ -108,13 +111,11 @@ void Game::playSounds()
     ( canPlaySound ? sound.play() : (void)0 );
 }
 
-void Game::render()
+void Game::render(sf::RenderWindow& window)
 {
-    window.clear(sf::Color::White);
     backgrounds.draw(window);
     gameText.draw(window);
     snakeHead.draw(window);
     for(auto x : snakeBodyDeque) x.draw(window);
     fruit.draw(window);
-    window.display();
 }

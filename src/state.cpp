@@ -1,16 +1,14 @@
 #include "state.hpp"
 
-State::State() { }
 
-State::~State() { }
+State::State() {}
 
-void State::setState(GameState gState)
+void State::setState(GameStates state)
 {
-    gameState = gState;
+    gameStates = state;
 }
 
-GameState State::getState() const
+GameStates State::getState() const
 {
-    return gameState;
+    return gameStates;
 }
-

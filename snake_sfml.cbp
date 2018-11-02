@@ -60,6 +60,7 @@
 		<Unit filename="include/randfunc.hpp" />
 		<Unit filename="include/sounds.hpp" />
 		<Unit filename="include/state.hpp" />
+		<Unit filename="include/statemanager.hpp" />
 		<Unit filename="include/textbase.hpp" />
 		<Unit filename="include/textbuilder.hpp" />
 		<Unit filename="main.cpp" />
@@ -73,6 +74,7 @@
 		<Unit filename="src/randfunc.cpp" />
 		<Unit filename="src/sounds.cpp" />
 		<Unit filename="src/state.cpp" />
+		<Unit filename="src/statemanager.cpp" />
 		<Unit filename="src/textbase.cpp" />
 		<Unit filename="src/textbuilder.cpp" />
 		<Extensions>
